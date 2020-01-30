@@ -25,17 +25,6 @@ jobs:
       with:
         node-version: '10.x'
 
-    - name: 'Run npm'
-      shell: pwsh
-      run: |
-        # If your function app project is not located in your repository's root
-        # Please change your directory for npm in pushd
-        pushd node/plain/functionApp/Application/
-        npm install
-        npm run build --if-present
-        npm run test --if-present
-        popd
-
     - name: 'Run Azure Functions Action'
       uses: Azure/functions-action@v1
       id: fa
