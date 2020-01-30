@@ -30,7 +30,7 @@ jobs:
       run: |
         # If your function app project is not located in your repository's root
         # Please change your directory for npm in pushd
-        pushd ./node/plain/functionApp/Application/
+        pushd node/plain/functionApp/Application/
         npm install
         npm run build --if-present
         npm run test --if-present
